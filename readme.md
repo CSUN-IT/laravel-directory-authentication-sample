@@ -14,8 +14,8 @@ This repository implements both the LDAP and local directory authentication func
 ### Configuration
 
 * `config/app.php`
-* `config/auth.php`
-* `config/dbauth.php`
+* `config/auth.php` (configuration for LDAP-specific authentication)
+* `config/dbauth.php` (configuration for database-specific authentication)
 
 ### Database Stuff
 
