@@ -31,12 +31,18 @@ class LocalUser extends MetaUser
     ];
 
     // implements MetaAuthenticatableContract#findForAuth
+    //
+    // the PK for the model is not "user_id" so it is imperative we implement
+    // this method to prevent auth session problems
     public static function findForAuth($identifier) {
         return self::where('id', '=', $identifier)
             ->first();
     }
 
     // implements MetaAuthenticatableContract#findForAuthToken
+    //
+    // the PK for the model is not "user_id" so it is imperative we implement
+    // this method to prevent auth session problems
     public static function findForAuthToken($identifier, $token) {
         return self::where('id', '=', $identifier)
             ->where('remember_token', '=', $token)
