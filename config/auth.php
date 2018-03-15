@@ -60,15 +60,22 @@ return [
     | sources which represent each model / table. These sources may then
     | be assigned to any extra authentication guards you have defined.
     |
-    | Supported: "database", "eloquent", "ldap" (custom)
+    | Supported: "database", "eloquent", "ldap" (custom), "dbauth" (custom)
     |
     */
 
     'providers' => [
+        // Local database authentication (using the directory package)
         'users' => [
-            'driver' => 'ldap',
-            'model' => App\User::class,
+            'driver' => 'dbauth',
+            'model' => App\LocalUser::class,
         ],
+
+        // LDAP authentication (directory auth)
+        // 'users' => [
+        //    'driver' => 'ldap',
+        //    'model' => App\User::class,
+        // ],
 
         // 'users' => [
         //     'driver' => 'database',
