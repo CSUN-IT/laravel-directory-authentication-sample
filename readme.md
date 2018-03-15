@@ -1,8 +1,10 @@
 ## Laravel Directory Auth Sample Application
 
-This application exists to provide sample usage for the Composer package located here: https://github.com/csun-metalab/laravel-directory-authentication
+This application exists to provide sample usage for the Composer package located here: https://github.com/csun-metalab/laravel-directory-authentication.
 
-This repository implements both the LDAP and local directory authentication functionality in the package. Take a look at the following files:
+This repository implements both the LDAP and local directory authentication functionality in the package. By default, the local database authentication mechanism is the one active by default but everything needed to leverage the LDAP method is included as well.
+
+Take a look at the following files:
 
 ### General Functionality
 
